@@ -31,7 +31,7 @@ class Person (
 //    fun isAdult(): Boolean{
 //        return this.age >= 20
 //    }
-    
+
     val isAdult: Boolean
         get() = this.age >= 20  // custom getter
 }
