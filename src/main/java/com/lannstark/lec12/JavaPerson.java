@@ -1,6 +1,6 @@
 package com.lannstark.lec12;
 
-public class JavaPerson {
+public class  JavaPerson {
 
   private static final int MIN_AGE = 1;
 
