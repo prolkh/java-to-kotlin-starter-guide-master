@@ -4,11 +4,7 @@ public class Lec16Main {
 
   public static void main(String[] args) {
 
-    System.out.println("Hello World");
-
-
-    int number = 100;
-
+    // Java 에서도 코틀린 확장함수를 사용할 수 있다.
+    StringUtilsKt.lastChar("ABC");
   }
-
 }
