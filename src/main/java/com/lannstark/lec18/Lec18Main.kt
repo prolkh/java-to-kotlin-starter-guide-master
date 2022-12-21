@@ -1,7 +1,5 @@
 package com.lannstark.lec18
 
-import com.lannstark.lec17.Fruit
-
 fun main() {
 
     val fruits = listOf(
@@ -38,6 +36,38 @@ fun main() {
     fruits.filter { fruit -> fruit.name == "사과" }
         .mapNotNull { fruit -> fruit.price }
 
+    // all
+    fruits.all { fruit -> fruit.name == "사과" }
+
+    // none
+    fruits.none {fruit -> fruit.name == "사과" }
+
+    // any
+    fruits.any { fruit -> fruit.price >= 10_000 }
+
+    // count
+    fruits.count()
+
+    // sortedBy, sortedByDescending
+    fruits.sortedBy { fruit -> fruit.price }
+    fruits.sortedByDescending { fruit -> fruit.price }
+
+    // distinctBy
+    fruits.distinctBy { fruit -> fruit.name }
+
+    // first, firstOrNull
+    fruits.first()
+    fruits.firstOrNull()
+
+    // last, lastOrNull
+    fruits.last()
+    fruits.lastOrNull()
+
+    // groupBy
+    val groupByMap: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
+
+    // associateBy
+    // val associateByMap: Map<Long, Fruit> = fruits.associateBy { fruit -> fruit.id }
 }
 
 private fun filterFruits(
